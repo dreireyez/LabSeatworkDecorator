@@ -15,20 +15,20 @@ A popular coffee shop, "Brewtiful," wants a flexible way to calculate the cost a
 
 ## Implementation Structure (Coffee Shop)
 **1. The Component Interface**<br>
-This defines the common operations for both the basic item and the decorators.
-Interface: Coffee
+This defines the common operations for both the basic item and the decorators.<br>
+Interface: Coffee<br>
 Operation: getDescription() (returns the ingredients) and getCost() (returns the price).
 
 **2. The Concrete Component**<br>
-This is the original, basic object that will be decorated.
-Class: BlackCoffee
-Implementation:
-getDescription(): returns "Black Coffee"
+This is the original, basic object that will be decorated.<br>
+Class: BlackCoffee<br>
+Implementation:<br>
+getDescription(): returns "Black Coffee"<br>
 getCost(): returns  ₱ 100.00
 
 **3. The Decorator Abstraction**<br>
-This ensures the decorator classes implement the Coffee interface and have a way to hold a reference to the Coffee object they are wrapping.
-Abstract Class/Interface: CoffeeDecorator (implements Coffee)
+This ensures the decorator classes implement the Coffee interface and have a way to hold a reference to the Coffee object they are wrapping.<br>
+Abstract Class/Interface: CoffeeDecorator (implements Coffee)<br>
 Implementation: Holds a private Coffee object and has a constructor/setter to wrap it. The methods will typically call the wrapped object's method before adding its own enhancement.
 
 **4. The Concrete Decorators**<br>
