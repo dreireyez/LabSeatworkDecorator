@@ -1,0 +1,16 @@
+// Main class used to test the functionality of the decorator design pattern
+public class Brewtiful {
+    public static void main(String[] args) {
+        Coffee blackCoffee = new BlackCoffee();
+        Milk coffeeWithMilk = new Milk();
+        coffeeWithMilk.setCoffee(blackCoffee);
+        CaramelSyrup coffeeWithSyrup = new CaramelSyrup();
+        coffeeWithSyrup.setCoffee(coffeeWithMilk);
+
+        System.out.println("Welcome to Brewtiful!");
+
+        System.out.println("ORDER SUMMARY:");
+        System.out.println("1x" + coffeeWithSyrup.getDescription());
+        System.out.println("Order Total: ₱ "+coffeeWithSyrup.getCost());
+    }
+}
