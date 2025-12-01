@@ -1,6 +1,7 @@
 // Main class used to test the functionality of the decorator design pattern
 public class Brewtiful {
     public static void main(String[] args) {
+        // An order of black coffee with both milk and caramel syrup.
         Coffee blackCoffee = new BlackCoffee();
         Milk coffeeWithMilk = new Milk();
         coffeeWithMilk.setCoffee(blackCoffee);

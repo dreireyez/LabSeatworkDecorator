@@ -6,10 +6,12 @@ public class Milk implements CoffeeDecorator {
         this.wrappedCoffee = coffee;
     }
 
+    @Override
     public String getDescription() {
         return wrappedCoffee.getDescription() + ", Milk";
     }
 
+    @Override
     public double getCost() {
         return wrappedCoffee.getCost() + 25.00;
     }
